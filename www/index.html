@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="mdlcop.index">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+
+    <title>Ejemplo Mobile App Maestría Tec</title>
+
+       
+  </head>
+  <body style="background-color: black;" ng-strict-di> 
+      <app id="spinnerContainer" style="text-align: center;">
+        <article>
+					<img src="img/Recurso 1.png" class="logo-gavar-slider" style="width: 100px; position: center; right: calc(50% - 150px); top: calc(50% - 70px);"/>
+						<div id="back-canvas"><canvas id="c"></canvas>
+						</div>
+        </article>
+        
+  
+      </app>
+
+    <div id="secondControllerId" style="width: 100%; height: 100%; display: none;" ng-controller="secondController">
+
+      
+      
+      
+
+                  <!-- ******************************************************************* NEW HTML *********************************************************** -->
+                  <div style="width: 100%; height: 100%;">
+                      <header style="min-height: 56px;">
+                        <div id="menuIcon" class="icon hamburger-icon" style="display: none;" sidebarjs-toggle></div>
+                        <h1>{{trTitle}}</h1>
+                 
+                      </header>
+
+
+                      <sidebarjs
+                        on-close="onSidebarClose()"
+                        on-open="onSidebarOpen()"
+                        on-change-visibility="onSidebarChangeVisibility($event)">
+
+                        
+                        
+                          
+                        <img src="img/Recurso 1.png" style=" justify-content: center;  width: 100%; top: 0px;">
+
+
+                        <nav style="height: 100%;">
+                          <div id="menuContainer">
+
+                            <!--
+                            <div class="">
+                              <div ng-click="getFirstMenu('inicio')" class="div-button-menu">
+                                <div class="menu-text-container">INICIO</div><div class="icon-container"><i class="fas fa-angle-right fa-2x"></i></div>
+                              </div>
+                            </div>
+                            -->
+
+
+
+
+
+                            <div id="menuContainerSecond">
+                              <div class="" ng-repeat="menu in dataMenu">
+                                <div ng-click="getFirstMenu(menu.Id, menu.Texto)" class="div-button-menu">
+                                  <div class="menu-text-container">{{menu.Texto}}</div><div class="icon-container"><i class="fas fa-angle-right fa-2x"></i></div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+
+                            <div class="">
+                              <!--<div ng-click="getFirstMenu('inicio')" class="btn menu-element" target=""><i class="fas fa-home fa-2x"></i> INICIO</div>-->
+                              <div ng-click="goToAbout('menu')" class="div-button-menu">
+                                <div class="menu-text-container"><i class="" ></i><a href="exp.html">Conductores</a></div>
+                                <div class="icon-container"><i class="fas fa-angle-right fa-1x"></i></div>
+
+                              </div>
+                              <div ng-click="goToAbout('menu')" class="div-button-menu">
+                                <div class="menu-text-container"><i class="fas fa-hand-holding-usd fa-2x"></i> Cordenadas</div><div class="icon-container"><i class="fas fa-angle-right fa-1x"></i></div>
+                              </div>
+                            </div>
+        
+                            
+
+                           </div>
+                         
+                        </nav>
+
+                        <div class="div-menu-bottom" ng-click="goToAbout('menu')">
+                          <h5 style="font-size: 11px !important; margin-top: 3px !important; margin-bottom: 3px !important;"><i class="fas fa-copyright fa-xs"></i> M <br>Tecnológico de Zacatecas</h5>
+                          <img src="" style="width: 160px; margin-bottom: 2px;">
+                        </div>
+                      </sidebarjs>
+
+                  
+
+                      <main class="main">
+                        <div id="sectionHome" class="">
+
+
+
+                           <form >
+                                <div  class="form-group">
+                                    <label>Usuario</label>
+                                    <input type="usuario" class="form-control" id="usuario" aria-describedby="emailHelp" placeholder="Usuario ">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                </div>
+                                <button id="ingresar" type="submit" ng-click="checkLogin()" class="btn btn-primary">Ingresar</button>
+                                <button id="registrar" type="submit" class="btn btn-primary">Registrar</button>
+                          </form>
+                           
+                            <button type="POST" style="color: #fff">hola alumnos</button>
+
+                            
+                        </div>
+
+              <div class="div-menu-bottom" ng-click="goToAbout('menu')">
+                          <h5 style="font-size: 11px !important; margin-top: 3px !important; margin-bottom: 3px !important;"><i class="fas fa-copyright fa-xs"></i> M <br>Tecnológico de Zacatecas</h5>
+                          <img src="" style="width: 160px; margin-bottom: 2px;">
+                        </div>
+<!-- *****************************************-->
+                  <div style="width: 100%; height: 100%;">
+                      <header style="min-height: 56px;">
+                        <div id="menuIcon" class="icon hamburger-icon" style="display: none;" sidebarjs-toggle></div>
+                        <h1>{{trTitle}}</h1>
+                 
+                      </header>
+
+                      <main class="main">
+                        <div id="Home" class="">
+
+
+<form id="registrar">
+                                <div  class="form-group">
+                                    <label>nombre de usuario</label>
+                                    <input type="usuario" class="form-control" id="user" aria-describedby="emailHelp" placeholder="nombre de usuario ">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" id="pass" placeholder="Password">
+                                </div>
+                               
+                                <button id="guardar" type="submit" ng-click="registro()" class="btn btn-primary">Guardar</button>
+                          
+                           
+
+                        </div>
+
+
+                        <div class="div-menu-bottom" ng-click="goToAbout('menu')">
+                          <h5 style="font-size: 11px !important; margin-top: 3px !important; margin-bottom: 3px !important;"><i class="fas fa-copyright fa-xs"></i> M <br>Tecnológico de Zacatecas</h5>
+                          <img src="" style="width: 160px; margin-bottom: 2px;">
+                        </div>
+
+
+                  </div>
+                
+
+               
+                
+  <!-- *****************************************-->
+<div style="width: 100%; height: 100%;">
+                      <header style="min-height: 56px;">
+                        <div id="menuIcon" class="icon hamburger-icon" style="display: none;" sidebarjs-toggle></div>
+                        <h1>{{trTitle}}</h1>
+                 
+                      </header>
+
+                      <main class="main">
+                        <div id="Home" class="">
+
+
+<table id="#tabla" style="
+   width: 100%" >
+  <caption>registros</caption>
+  <thead>
+    <tr>
+      <th>Nombre usuario</th>
+      <th> Contraseña</th>
+      <th> eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td type="text" colspan="" rowspan="" headers="" id="username">'($fila["username"])'</td>
+      <td type="text" colspan="" rowspan="" headers="" id="password">{"$password"}</td>
+      <td><button type="submit" ng-click="eliminar()" class="btn btn-primary" ></button></td>
+    </tr>
+  </tbody>
+</table>
+
+
+                       
+
+                  </div>
+  <!-- *****************************************-->
+<div style="width: 100%; height: 100%;">
+                      <header style="min-height: 56px;">
+                        <div id="menuIcon" class="icon hamburger-icon" style="display: none;" sidebarjs-toggle></div>
+                        <h1>{{trTitle}}</h1>
+                 
+                      </header>
+
+
+                     
+
+                  
+
+                      <main class="main">
+                        <div id="sectionHome" class="main-index div-container-index text-center">
+                                                       <div id="map"></div>
+
+
+                        </div>
+
+              <div class="div-menu-bottom" ng-click="goToAbout('menu')">
+                          <h5 style="font-size: 11px !important; margin-top: 3px !important; margin-bottom: 3px !important;"><i class="fas fa-copyright fa-xs"></i> M <br>Tecnológico de Zacatecas</h5>
+                          <img src="" style="width: 160px; margin-bottom: 2px;">
+                        </div>
+
+
+
+                  </div>
+ 
+  <!-- *****************************************-->
+                      
+                  
+
+<!-- *****************************************-->
+
+
+
+
+
+
+     
+                      
+
+                      <style>
+                        .main-index{
+                          width: 100%;
+                          height: 100%;
+                          top: 56px;
+                          background-image: url(img/background-start.jpg);
+                          /*background-position: right bottom, left top;
+                          background-repeat: no-repeat, repeat;*/
+                          /*background-position: left;*/
+                          background-size: 100%;
+                        }
+
+                        .main{
+                          width: 100%;
+                          height: calc(100% - 100px);
+                        }
+
+                        .second-section{
+                          width: 100%;
+                          height: 100%;
+                          background-image: url(img/2level.jpg);
+                          /*background-position: right bottom, left top;*/
+                          background-repeat: no-repeat, repeat;
+                          background-position: left;
+                          overflow-x: auto;
+                        }
+                        
+                      </style>
+
+                      <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+ 
+ 
+    </style>
+
+
+                  <!-- ******************************************************************* NEW HTML *********************************************************** -->
+
+ 
+
+
+   
+
+    <!--
+    <script type="text/javascript" src="cordova.js"></script>
+    -->
+
+    <link rel="stylesheet" href="dist/angular-sidebarjs.css">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="libs/bootstrap337.min.css"> 
+
+
+
+
+    <!--
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+    -->
+      
+    <script>
+      var c = document.getElementById("c");
+      var ctx = c.getContext("2d");
+
+      //faz o canvas full screen
+      c.height = window.innerHeight;
+      c.width = window.innerWidth;
+
+      //caracteresDaChuva
+      var caracteresDaChuva = "0 1";
+      //converte a string em um array de caracteres unicode
+      caracteresDaChuva = caracteresDaChuva.split("");
+
+      var font_size = 20;
+      var columns = c.width/font_size; //numero de colunas da chuva.
+
+      //an array of drops - one per column
+      var drops = [];
+      //x below is the x coordinate
+      //1 = y co-ordinate of the drop(same for every drop initially)
+      for(var x = 0; x < columns; x++)
+        drops[x] = 1; 
+
+      //drawing the characters
+      function draw()
+      {
+        //Black BG for the canvas
+        //translucent BG to show trail
+        ctx.fillStyle = "#fff"; 
+    
+    /*	ctx.fillStyle = "rgba(144, 144, 144, 0.05)"; */
+
+        ctx.fillRect(0, 0, c.width, c.height);
+        
+      //	ctx.fillStyle = "#0F0"; //green text 
+        ctx.fillStyle = "#00bec1";
+
+        ctx.font = font_size + "px arial";
+        //looping over drops
+        for(var i = 0; i < drops.length; i++)
+        {
+          //a random chinese character to print
+          var text = caracteresDaChuva[Math.floor(Math.random()*caracteresDaChuva.length)];
+          //x = i*font_size, y = value of drops[i]*font_size
+          ctx.fillText(text, i*font_size, drops[i]*font_size);
+          
+          //sending the drop back to the top randomly after it has crossed the screen
+          //adding a randomness to the reset to make the drops scattered on the Y axis
+          if(drops[i]*font_size > c.height && Math.random() > 0.975)
+            drops[i] = 0;
+          
+          //incrementing Y coordinate
+          drops[i]++;
+        }
+      }
+
+      setInterval(draw, 33);
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <script defer src="libs/font-awsome.js"></script>
+
+
+
+ 
+    <script src="jquery133.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="libs/bootstrap337.min.js"></script>
+
+
+    <script src="angular167.min.js"></script>
+
+    <!--
+    <script src="js/calculadora.controller.js"></script>
+    -->
+
+    <link rel="stylesheet" href="demo.css">   
+    
+    
+    <script src="dist/angular-sidebarjs.js"></script>
+
+
+    <script src="libs/moment.min.js"></script>
+
+
+
+     <!-- CALCULADORA -->
+
+    <!--<link rel="stylesheet" href="libs/jquery12.css"> 
+    <script src="libs/jquery112-ui.js"></script>-->
+    
+<!--
+    <link href="css/font-awesome.min.css" rel="stylesheet">-->
+   
+   <!-- CALENDARIO RARO
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/cuppa-datepicker-styles.css" rel="stylesheet">
+    <script type="text/javascript" src="libs/cuppa-calendar.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/locale/af.js"></script>
+    -->
+
+
+    <!--
+     <script src="libs/angular-bind-html-compile.min.js"></script>-->
+<!--
+    <script src="js/main.service.js"></script>-->
+
+    <script src="demo.js"></script>
+ <script>
+     var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 22.7295819, lng: -102.8346126},
+          zoom: 8
+        });
+         infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYw5kx77ie7ZZJOpPqarqysZj-3wwSPi4&callback=initMap"
+    async defer></script>
+
+  </body>
+</html>
