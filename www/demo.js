@@ -12,7 +12,6 @@ function AppCtrl(SidebarJS, $scope, $route, $compile, $apply, menuService) {
   $("#menuIcon").show();
 
 
-
   
 
   //$('#modalStart').modal('show');
@@ -70,7 +69,6 @@ function AppCtrl(SidebarJS, $scope, $route, $compile, $apply, menuService) {
             }
         });
     }
-
 
 /************************************/
 
